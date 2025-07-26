@@ -16,6 +16,7 @@ from selenium.webdriver.chrome.options import Options
 from langchain_core.documents import Document
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin
+from flask_cors import CORS  # Added import for CORS
 
 # Set telemetry and USER_AGENT environment variables early
 os.environ["CHROMA_TELEMETRY_ENABLED"] = "FALSE"
@@ -46,6 +47,7 @@ load_dotenv()
 
 # Initialize Flask app
 app = Flask(__name__)
+CORS(app)  # Added CORS with wildcard (*) to allow all origins
 
 # Set up Gemini API key
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
