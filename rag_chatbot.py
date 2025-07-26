@@ -60,7 +60,7 @@ def index_content():
     try:
         # Define base URL and SPA routes
         base_url = "https://campuslink-sece.vercel.app"
-        routes = ["/", "/about", "/services", "/announcements"]
+        routes = ["/","/announcements"]
         urls = [urljoin(base_url, route) for route in routes]
         logger.info(f"Loading content from {len(urls)} URLs: {urls}")
 
