@@ -1,0 +1,11 @@
+flask
+selenium
+beautifulsoup4
+chromadb==0.4.24
+langchain
+langchain-community
+langchain-core
+langchain-google-genai
+google-generativeai
+python-dotenv
+tqdm
